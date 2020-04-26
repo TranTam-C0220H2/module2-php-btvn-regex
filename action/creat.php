@@ -21,7 +21,7 @@ $_SESSION['checkExistedEmail'] = false;
 $userManager = new UserManager();
 $dataArrayUser = $userManager->getDataJsonUser('../data/data.json');
 $checkInfoUser = 0;
-foreach ($dataArrayUser as $index => $item) {
+foreach ($dataArrayUser as $item) {
     if ($item->email == $email) {
         $_SESSION['email'] = '';
         $_SESSION['checkExistedEmail'] = true;

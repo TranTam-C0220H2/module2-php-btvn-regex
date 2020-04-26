@@ -8,7 +8,7 @@ $password = $_POST['password'];
 
 $dataArrayUser = $userManager->getDataJsonUser('../data/data.json');
 
-foreach ($dataArrayUser as $index => $item) {
+foreach ($dataArrayUser as $item) {
     if ($item->email == $userName && $item->password == $password) {
         $_SESSION['login'] = true;
         $_SESSION['firstName'] = $item->firstName;

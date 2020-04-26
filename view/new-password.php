@@ -7,7 +7,7 @@ $confirmPassword = $_POST['confirmPassword'];
 if (isset($password)) {
 if ($userManager->checkPassword($password)) {
     if ($password == $confirmPassword) {
-        foreach ($_SESSION['dataArrayUser'] as $index => $item) {
+        foreach ($_SESSION['dataArrayUser'] as $item) {
             $item->password = $password;
             $_SESSION['firstName'] = $item->firstName;
         }
